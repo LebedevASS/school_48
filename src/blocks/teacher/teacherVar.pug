@@ -1,0 +1,38 @@
+.container__sidebar.grid
+    include ../sidebar/sidebarTeacher.pug
+    section.lk__main
+        section.lk__header.flex 
+            .bread
+                a(href="../teacherMain.html").lk__text Главная/
+                a(href="../teacherVar.html").lk__text--active Мои варианты
+            include ../teacher/headerContent.pug
+        .lk__line_end
+        section
+            h1.lk__title Мои варианты
+            nav.navigation.flex.space-between
+                .filter.flex
+                    button.filter__links.purple.active(onclick="openVar(event,'all')") Все
+                    button.filter__links.green(onclick="openVar(event,'active')") Активные
+                    button.filter__links.red(onclick="openVar(event,'finish')") Завершенные
+                a(href="#").content__form-btn.content__form-btn--text.content__form-btn--height Создать вариант
+            .lk__line_end
+            section.teacher__var-new 
+                .teacher__var-container.grid
+                    .teacher__var-head.var-head.grid
+                        .var-head__number.flex №
+                        p.var-head__name Название
+                        .var-head__status_new
+                            .var-head__status-point_new
+                            p.var-head__status-text Статус
+                        p.var-head__period Сроки
+                        .var-head__progress
+                            .var-head__progress-bar
+                            .var-head__progress-digit Прогресс
+            .var-content.all#all
+                include ../teacher/listVarTeacher.pug
+            .var-content#active
+                include ../teacher/activVarTeacher.pug
+            .var-content#finish
+                include ../teacher/finishVarTeacher.pug
+script(src="assets/js/filter.min.js")
+

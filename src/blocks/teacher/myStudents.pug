@@ -1,0 +1,12 @@
+.container__sidebar.grid
+    include ../sidebar/sidebarTeacher.pug
+    section.lk__main
+        section.lk__header.flex 
+            .bread
+                a(href="../teacherMain.html").lk__text Главная/
+                a(href="../myStudents.html").lk__text--active Список учеников
+            include ../teacher/headerContent.pug
+        section
+            h1.lk__title Мои ученики
+        .lk__line_end
+            

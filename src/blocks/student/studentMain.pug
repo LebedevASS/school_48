@@ -1,0 +1,16 @@
+.container__sidebar.grid
+    include ../sidebar/sidebarStudent.pug
+    section.lk__main
+        section.lk__header.flex 
+            a(href="../studentMain.html").lk__text Главная
+            include ../teacher/headerContent.pug
+        .lk__line_end
+        section.lk__fio-block.grid
+            h1.lk__fio Фамилия Имя<br>Отчество
+            .lk__bg
+        .lk__line_end
+        h2.lk__var-text Недавно добавленные варианты
+        .var-content.active
+            include ./studentVars-new.pug
+            include ./studentVars-new.pug
+            include ./studentVars-new.pug

@@ -1,0 +1,13 @@
+.container__sidebar.grid
+    include ../sidebar/sidebarTeacher.pug
+    section.lk__main
+        section.lk__header.flex 
+            .bread 
+                a(href="../teacherMain.html").lk__text Главная
+                span.lk__text /
+                a(href="../teacherTask.html").lk__text--active Мои задачи
+            include ../teacher/headerContent.pug
+        .lk__line_end
+        section
+            h1.lk__title Мои задачи
+        .lk__line_end

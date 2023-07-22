@@ -1,0 +1,132 @@
+.container__sidebar {
+    grid-template-columns: 328px 1fr;
+    font-family: $font-family-Unbounded;
+    font-style: normal;
+    font-weight: $regular-font-weight;
+    font-size: $base-font-size;
+    line-height: 25px;
+    color: $black-color;
+}
+
+.sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background-color: $white-clear;
+    border-right: 1.5px solid rgba(21, 24, 28, 0.2);
+    border-radius: 0px 24px 24px 0px;
+
+    &__logo {
+        margin-top: 40px;
+        margin-left: $margin-88;
+        font-size: 24px;
+        font-weight: $bold-font-weight;
+        line-height: 30px;
+        color: $green-color;
+    }
+
+    &__menu {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 70px;
+        gap: $margin-24;
+        
+        .active {
+            color: $purpul-color;
+            background-color: rgba(93, 33, 208, 0.2);
+            box-sizing: border-box;
+            border-right: 4px solid $purpul-color;
+            animation: none; 
+        }
+
+        a {
+            width: 100%;
+            height: 64px;
+            padding-top: 19px;
+            padding-left: $margin-88;
+            background-repeat: no-repeat;
+            background-position-x: $margin-48;
+            background-position-y: center;
+            transition: .3s ease-in-out;
+            
+            &:hover {
+                background-color: rgba(21, 24, 28, 0.102);
+            }
+            
+            &:focus {
+            color: $purpul-color;
+            background-color: rgba(93, 33, 208, 0.2);
+            //    Надо найти как сделать внутреннею часть правой рамки скругленной
+            box-sizing: border-box;
+            border-right: 4px solid $purpul-color; 
+            }
+        }
+    }
+
+    &__home-link {
+        background-image: url(../images/sidebar/house.svg);
+    }
+
+    &__home-link.active {
+        background-image: url(../images/sidebar/house-fill.svg);
+    }
+
+    &__task-link {
+        background-image: url(../images/sidebar/block.svg);
+    }
+
+    &__task-link.active {
+        background-image: url(../images/sidebar/block-fill.svg);
+    }
+
+    &__result-link {
+        background-image: url(../images/sidebar/check.svg);  
+    }
+
+    &__result-link.active {
+        background-image: url(../images/sidebar/check-fill.svg);  
+    }
+
+    &__var-link {
+    background-image: url(../images/sidebar/notepad.svg);  
+    }
+
+    &__var-link.active {
+        background-image: url(../images/sidebar/notepad-fill.svg);  
+    }
+
+    &__students-link {
+        background-image: url(../images/sidebar/users.svg);  
+    }
+
+    &__students-link.active {
+        background-image: url(../images/sidebar/users-fill.svg);  
+    }
+    
+    &__exit {
+        position: absolute;
+        bottom: 43px;
+        left: $margin-88;
+        color: $red-color;
+        opacity: .7;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        .icon-exit {
+            position: absolute;
+            bottom: 0;
+            left: -40px;
+            width: 28px;
+            height: 28px;
+            fill: $red-color;
+        }
+    }
+}
+
+
+  
+ 

@@ -1,0 +1,160 @@
+.login__select {
+  width: 592px;
+}
+
+.login__input::placeholder {
+  font-family: $font-family-MinSans;
+  font-style: normal;
+  font-weight: $regular-font-weight;
+  font-size: $base-font-size;
+  line-height: 27px;
+  color: rgba(0, 0, 0, 0.4);
+  background-color: $layout-color;
+}
+
+.select2-container--default .select2-selection--single {
+  height: 64px;
+  padding: 16px 20px;
+  font-family: $font-family-MinSans;
+  font-style: normal;
+  font-weight: $regular-font-weight;
+  font-size: $base-font-size;
+  color: rgba(21, 24, 28, 0.2);
+  background-color: $layout-color;
+  border: 2px solid rgba(21, 24, 28, 0.3);
+  border-radius: 8px;
+}
+
+/* добавляем светло-сиреневую рамку, если выбрано */
+.select2-container--valid .select2-selection--single {
+  border: 2px solid $purple-light;
+  background-color: $layout-color;
+  border-radius: 10px;
+}
+
+.select2-container--default .select2-selection--single:hover {
+  border: 2px solid $purpul-color;
+  background-color: $layout-color;
+}
+
+.select2-results__option {
+  padding: 12px;
+  font-family: $font-family-MinSans;
+  font-style: normal;
+  font-weight: $regular-font-weight;
+  font-size: $base-font-size;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: $layout-color;
+}
+
+/*---цвет выдеделения при наведении*/
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected] {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+}
+
+.select2-container--default .select2-results__option[aria-selected="true"] {
+  background-color: $layout-color;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Стилизация полосы прокрутки в Select2 */
+.select2-container--default .select2-results__options::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.select2-container--default .select2-results__options::-webkit-scrollbar-thumb {
+  background-color: $green-color;
+  border-radius: 4px;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+/*---При вводе у рамки оставляем только нижнее подчеркивание*/
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 1px solid rgba(170, 170, 170, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: $layout-color;
+}
+
+/*--- Убираем стрелку---*/
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  border-style: none;
+}
+
+/*---Общая рамка при выпадении списка*/
+.select2-dropdown {
+  border: 2px solid $purpul-color;
+  padding: 12px;
+  background-color: $layout-color;
+}
+
+/* добавляем красную рамку, если ничего не выбрано (положение не менять!) */
+.select2-container--required .select2-selection {
+  border: 2px solid $red-color;
+}
+
+.select2-container--open .select2-selection--single {
+  border-top: 2px solid $purpul-color;
+  border-left: 2px solid $purpul-color;
+  border-right: 2px solid $purpul-color;
+  border-bottom: none;
+  outline: none;
+}
+
+.select2-container--open ~ .placeholders {
+  transform: translateY(-39px) translateX(10px) scale(0.75);
+  background-color: $layout-color;
+  padding: 10px;
+  border-radius: 75%;
+  color: $purpul-color;
+}
+.select2-container--focus ~ .placeholders {
+  display: none;
+}
+.placeholders {
+  left: 20px;
+  font-family: $font-family-MinSans;
+  font-weight: $regular-font-weight;
+  font-size: $base-font-size;
+  line-height: 27px;
+  color: rgba(21, 24, 28, 0.2);
+  background-color: $layout-color;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+  top: 17px;
+}
+
+.select2-container--valid .select2-container--below ~ .placeholders {
+  display: none;
+}
+.select2-container--required .login__select ~ .dids {
+  display: block;
+}
+
+.dids {
+  color: $red-color;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 0 5px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  display: none;
+}
+
+.select2-container--default .select2-results__message::before {
+  content: "Ничего не найдено; ";
+}

@@ -1,0 +1,257 @@
+.stud-var-item {
+    height: 354px;
+    width: 488px;
+    background-color: $white-clear;
+    font-size: $base-font-size;
+    border: 2px solid rgba(21, 24, 28, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    row-gap: 24px;
+    grid-template-rows: auto 1fr auto auto;
+
+    &__header {
+        grid-template-columns: auto auto 1fr;
+        align-items: center;
+    }
+
+    &__number {
+        width: 56px;
+        height: 56px; 
+        background-color: $purpul-color;
+        opacity: .7;
+        color: $white-color;
+        border-radius: 8px;
+        font-weight: $bold-font-weight;
+        justify-content: center;
+        align-items: center; 
+        margin-right: 16px;
+        
+        &_gray {
+            background-color: rgba(21, 24, 28, 0.2);
+            width: 56px;
+            height: 56px;
+            margin-right: 24px;
+            color: $white-color;
+            border-radius: 8px;
+            font-weight: $bold-font-weight;
+            justify-content: center;
+            align-items: center; 
+            margin-right: 16px;  
+        }
+    }
+
+    &__status-new {
+        @include task-status_new;
+        &_point {
+            background-color: $yellow-color;
+            width: 18px;
+            height: 18px;
+            border-radius: 90px;
+        }
+    }
+
+    &__status-active {
+        @include task-status_active;
+        &_point {
+            background-color: $green-color;
+            width: 18px;
+            height: 18px;
+            border-radius: 90px;
+        }
+    }
+
+    &__status-end {
+        @include task-status_complete;
+        &_point {
+            background-color: $red-color;
+            width: 18px;
+            height: 18px;
+            border-radius: 90px;
+        }
+    }
+
+    &__date {
+        justify-self: end;
+        font-weight: $bold-font-weight;
+        color: rgba(21, 24, 28, 0.3);
+        font-family: $font-family-MinSans;   
+    }
+
+    &__name {
+        font-weight: 700;
+        font-family: $font-family-MinSans;
+    }
+
+    &__numbers {
+        grid-template-columns: repeat(8, auto);
+        gap: 8px;
+        font-family: $font-family-MinSans;
+
+        &_num {
+            height: 32px;
+            width: 48px;
+            border: 2px solid $black-light;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            color: rgba(21, 24, 28, 0.3);
+            font-size: 18px;
+            font-weight: 700;
+
+            &-red {
+                height: 32px;
+                width: 48px;
+                color: $red-color;
+                background-color: rgba(208, 33, 65, 0.1);
+                border: 0;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            &-green {
+                height: 32px;
+                width: 48px;
+                color: $green-color;
+                background-color: rgba(16, 166, 116, 0.1);
+                border: 0;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__button {
+        height: 48px;
+        background: $purpul-color;
+        justify-content: center;
+        align-items: center;
+        color: $white-color;
+        font-size: 16px;
+        font-weight: $bold-font-weight;
+        border-radius: 8px;
+        font-family: $font-family-Unbounded;
+        transition: ease-in-out .3s;
+
+        &:hover {
+            background: $purple-light;
+        }
+    }
+}
+
+.stud-var-result {
+    padding: 32px 0;
+    grid-template-columns: repeat(2, 736px);
+    grid-gap: 40px;
+    font-size: $base-font-size;
+    font-family: $font-family-MinSans;;
+
+    &__progress {
+        background-color: $white-clear;
+        width: 736px;
+        height: fit-content;
+        border: 2px solid rgba(21, 24, 28, 0.1);
+        border-radius: 16px;
+        padding: 24px;
+        grid-gap: 20px;
+    }
+
+    &__task {
+        background-color: $white-clear;
+        width: 736px;
+        border: 2px solid rgba(21, 24, 28, 0.1);
+        border-radius: 16px;
+        padding: 24px;
+    }
+
+    &__header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__number {
+        width: 48px;
+        height: 48px;
+        background-color: rgba(21, 24, 28, 0.2);
+        opacity: .7;
+        color: $white-color;
+        border-radius: 8px;
+        font-weight: $bold-font-weight;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-family-Unbounded;
+    }
+
+    &__period {
+        color: rgba(21, 24, 28, 0.3);
+    }
+
+    &__name {
+        height: 48px;
+        font-weight: 700;
+    }
+
+    &__task {
+        padding: 24px;
+        
+        &-list {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(8,auto);
+            grid-auto-flow: column;
+            row-gap: 12px;
+        }
+    }
+
+    &__num {
+        gap: 8px;
+        align-items: center;    
+        
+        &_text {
+            color: rgba(21, 24, 28, 0.5);
+            font-size: 16px;    
+        }
+
+        &_gray {
+            height: 32px;
+            width: 48px;
+            border: 2px solid $black-light;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            color: rgba(21, 24, 28, 0.3);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        &_red {
+            height: 32px;
+            width: 48px;
+            color: $red-color;
+            background-color: rgba(208, 33, 65, 0.1);
+            border: 0;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        &_green {
+            height: 32px;
+            width: 48px;
+            color: $green-color;
+            background-color: rgba(16, 166, 116, 0.1);
+            border: 0;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+}

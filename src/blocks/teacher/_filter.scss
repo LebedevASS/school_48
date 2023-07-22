@@ -1,0 +1,86 @@
+.content__form-btn--height {
+    height: 57px;
+ }
+
+.filter {
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter__links:hover {
+    border: 2px solid transparent;
+    opacity: 1;
+}
+.filter__links.purple:hover {
+    color: $purpul-color;
+    border-color: $purpul-color;
+}
+
+.filter__links.green:hover {
+    color: $green-color;
+    border-color: $green-color;
+}
+
+.filter__links.red:hover {
+    color: $red-color;
+    border-color: $red-color;
+}
+
+/* Стили вкладок */
+.filter button {
+    min-height: 57px;
+    padding: 0 15px 0 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(21, 24, 28, 0.2);
+    color: $black-color;
+    background-color: $white-color;
+    font-family: $font-family-MinSans;
+    font-weight: 500;
+    opacity: .6;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+    
+/* Стиль активных  вкладок */
+.filter button.active.purple {
+    border: 2px solid transparent;
+    color: $purpul-color;
+    background-color: rgba(93, 33, 208, 0.2);
+    opacity: 1;
+}
+
+.filter button.active.green {
+    border: 2px solid transparent;
+    color: $green-color;
+    background-color: rgb(16, 166, 116, 0.2);
+    opacity: 1;
+}
+
+.filter button.active.red {
+    border: 2px solid transparent;
+    color: $red-color;
+    background-color: rgb(208, 33, 65, 0.2);
+    opacity: 1;
+}
+
+/* Стиль содержимого вкладки*/
+.var-content {
+    display: none;
+    padding-top: 24px;
+    border: none;
+    grid-template-columns: repeat(3, 488px);
+    column-gap: 24px;
+    row-gap: 56px;
+}
+
+.var-content.all {
+    display: block;
+}
+
+.var-content.active {
+    display: grid;
+}
+
+.var-result {
+    padding: 32px 0;
+}

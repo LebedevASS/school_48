@@ -1,0 +1,36 @@
+.container__sidebar.grid
+    include ../sidebar/sidebarStudent.pug
+    section.lk__main
+        section.lk__header.flex 
+            .bread
+                a(href="../studentMain.html").lk__text Главная
+                span.lk__text /
+                a(href="../studentTask.html").lk__text--active Мои варианты
+            include ../teacher/headerContent.pug
+        .lk__line_end
+        section
+            h1.lk__title Мои варианты
+            nav.filter.flex
+                button.filter__links.purple.active(onclick="openVar(event,'all')") Все
+                button.filter__links.green(onclick="openVar(event,'active')") Активные
+                button.filter__links.red(onclick="openVar(event,'finish')") Завершенные
+                button.filter__links.red(onclick="openVar(event,'overdue')") Просроченные
+            .lk__line_end
+            .var-content.active#all
+                include ./studentVars-new.pug
+                include ./studentVars-new.pug
+                include ./studentVars-active.pug
+                include ./studentVars-active.pug
+                include ./studentVars-active.pug
+                include ./studentVars-end.pug
+            .var-content#active
+                include ./studentVars-active.pug
+                include ./studentVars-active.pug
+                include ./studentVars-active.pug
+            .var-content#finish
+                include ./studentVars-end.pug
+                include ./studentVars-end.pug
+            .var-content#overdue
+                include ./studentVars-overdue.pug
+                include ./studentVars-overdue.pug
+script(src="assets/js/filter.min.js")

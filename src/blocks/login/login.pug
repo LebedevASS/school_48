@@ -1,0 +1,54 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title CODikUM Авторизация/Регистрация
+  body
+    .container 
+      .img 
+      .content 
+        h1.content__title Авторизация
+        p.content__text Только для зарегистрированных пользователей
+        
+        form.content__form.grid(action="" method="post")
+          .content__input-wrapper
+            input.input.input__mail(type="email" id="email" placeholder=" ")
+            label.input-label.placeholder(for="email") E-mail
+            label.did-floating-label(for="email")
+
+
+          .content__input-wrapper
+            input.input.input__pass(type="password" id="password" placeholder=" " oninput="passLength()")
+            label.input-label.placeholder(for="password") Пароль
+            label.did-floating-label(for="password")
+            mixin icon(name)
+              svg(class=`icon icon-${name}`)
+                use(xlink:href=`assets/images/sprite.svg#${name}`)
+            .iconPass
+              +icon("hide-pass")
+            .iconText.d-none
+              +icon("open-pass")
+
+
+        .reset-wrapper  
+          a.reset-pass(href="#") Забыли пароль?
+        button.content__form-btn.margin24(type="button") Войти
+        .content__reg-wrapper 
+          p.content__text.content__text_gray Еще не зарегистрированы?
+          a.content__reg.btn-reset(href="#openModal") Регистрация
+        
+      .modal(id="openModal")
+        .modal-dialog
+          .modal-content.grid
+            .imgWarn.content             
+            h1.content__title Внимание!
+            span.content__text--modal Регистрация учителей осуществляется администратором.
+            a.close.content__form-btn.margin24.content__form-btn--text(href="../reg.html" title="Close") Я - ученик
+            a.close.close__form-btn.margin24.content__form-btn--text(href="#close" title="Close") Закрыть
+    
+    script(src="assets/js/main.min.js")
+
+
+      

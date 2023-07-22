@@ -1,0 +1,76 @@
+.container__sidebar.grid
+    include ../sidebar/sidebarStudent.pug
+    section.lk__main
+        section.lk__header.flex 
+            .bread
+                a(href="../studentMain.html").lk__text Главная
+                span.lk__text /
+                a(href="../studentTask.html").lk__text Мои варианты
+                span.lk__text /
+                a(href="../studentVarResult.html").lk__text--active Результат выполнения варианта
+            include ../teacher/headerContent.pug
+        .lk__line_end
+        section
+            h1.lk__title Результат выполнения варианта
+            a(href="../studentTask.html").lk__back < Назад
+        .lk__line_end
+        .stud-var-result.grid
+            .stud-var-result__progress.grid
+                .stud-var-result__header.flex
+                    .stud-var-result__number.flex 14
+                    span.stud-var-result__period до 7 мая
+                p.stud-var-result__name Полезные библиотеки типа itertools, collections и тому подобное
+                .stud-var-result__progress-bar
+                    .text-wrapper 
+                        span.progress-bar-text Заполнено
+                        span.progress-bar-value 80%
+                    .progress-bar.progress-bar_varResult
+            .stud-var-result__task
+                p.stud-var-result__name Список задач:
+                .stud-var-result__task-list.grid
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_green.flex 1
+                        span.stud-var-result__num_text - Выполнена успешно.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_green.flex 2
+                        span.stud-var-result__num_text - Выполнена успешно.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_red.flex 3
+                        span.stud-var-result__num_text - Выполнена с ошибкой.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_green.flex 4
+                        span.stud-var-result__num_text - Выполнена успешно.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_green.flex 5
+                        span.stud-var-result__num_text - Выполнена успешно.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_green.flex 6
+                        span.stud-var-result__num_text - Выполнена успешно.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_green.flex 7
+                        span.stud-var-result__num_text - Выполнена успешно.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_green.flex 8
+                        span.stud-var-result__num_text - Выполнена успешно.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_red.flex 9
+                        span.stud-var-result__num_text - Выполнена с ошибкой.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_green.flex 10
+                        span.stud-var-result__num_text - Выполнена успешно.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_green.flex 11
+                        span.stud-var-result__num_text - Выполнена успешно.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_red.flex 12
+                        span.stud-var-result__num_text - Выполнена с ошибкой.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_green.flex 13
+                        span.stud-var-result__num_text - Выполнена успешно.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_gray.flex 14
+                        span.stud-var-result__num_text - Не выполнена.
+                    .stud-var-result__num.flex
+                        .stud-var-result__num_gray.flex 15
+                        span.stud-var-result__num_text - Не выполнена.
+                    

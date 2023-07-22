@@ -1,0 +1,88 @@
+.teacher__var-container {
+    gap: 16px;
+}
+
+.var-head {
+    grid-template-columns: auto 364px auto auto auto;
+    height: 60px;
+    align-items: end;
+    justify-self: left;
+    gap: 64px;
+    padding: 0 32px;
+
+    &__number {
+        width: 56px;
+        height: 56px;
+        justify-content: center;
+        align-items: end;
+    }
+
+    &__name {
+        width: 300px;
+    }
+    
+    &__period {
+        margin-left: 74px;
+        margin-right: 200px;
+    } 
+
+}
+
+.var-item {
+    grid-template-columns: auto 356px 172px 284px auto;
+    align-items: center;
+    padding: 24px 32px;
+    background-color: $white-clear;
+    border-radius: 16px;
+    border: 1.5px solid $black-light;
+    justify-self: left;
+    gap: 64px;
+
+    &__number {
+        width: 56px;
+        height: 56px;
+        background-color: $purpul-color;
+        opacity: .7;
+        color: $white-color;
+        border-radius: 8px;
+        font-weight: $bold-font-weight;
+        justify-content: center;
+        align-items: center;
+    }   
+    
+    &__name {
+        font-family: $font-family-MinSans;
+        font-weight: 700;
+    }
+
+    &__period {
+        font-family: $font-family-MinSans;
+    }
+
+    &__progress {
+        gap: 10px;
+        align-items: center;
+
+        &-bar {
+            width: 190px;
+            height: 8px;
+            border-radius: 5px;
+            background-color: $black-light;
+            
+            &::before {
+                content: " ";
+                position: absolute;
+                width: 40px;
+                height: 8px;
+                background: $green-color;
+                border-radius: 5px;
+            }                
+        }
+
+        &-digit {
+            width: 120px;
+            font-family: $font-family-MinSans;
+            font-weight: $bold-font-weight;
+        }
+    }
+}

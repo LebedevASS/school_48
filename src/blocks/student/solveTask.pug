@@ -1,0 +1,43 @@
+.container__sidebar.grid
+    include ../sidebar/sidebarStudent.pug
+    section.lk__main
+        section.lk__header.flex 
+            .bread
+                a(href="../studentMain.html").lk__text Главная /
+                a(href="../studentTask.html").lk__text Мои варианты /
+                a(href="../studentTask.html").lk__text--active Решение варианта
+            include ../teacher/headerContent.pug
+        .lk__line_end
+        section
+            h1.lk__title Решение варианта
+            .flex.space-between
+                .inner.flex
+                    .var-item__number.flex 11
+                    p.var-item__name ООП. Классы и объекты
+                p.var-item__period Дедлайн: 10 июня 23:59
+            .lk__line_end
+        section.solve__task.flex.space-between
+            .task__number
+                .stud-var-item__numbers_num-green.flex 1
+                .stud-var-item__numbers_num-green.flex 2
+                .stud-var-item__numbers_num-green.flex 3
+                .stud-var-item__numbers_num-green.flex 4
+                .stud-var-item__numbers_num-red.flex 5
+                .stud-var-item__numbers_num-red.flex 5
+                .stud-var-item__numbers_num-green.flex 7
+                .stud-var-item__numbers_num-green.flex 8
+                .stud-var-item__numbers_num-green.flex 9
+                .stud-var-item__numbers_num-red.flex 10
+                .stud-var-item__numbers_num-red.flex 11
+                .stud-var-item__numbers_num-green.flex 12
+                .stud-var-item__numbers_num-active.flex 13
+                .stud-var-item__numbers_num.flex 14
+                .stud-var-item__numbers_num.flex 15
+            .compiler
+                textarea#code.lk__inner-border.var-item__period.padding(rows="10" cols="44") print(sum(i for i in range(1, 1000) if i%3 == 0 or i%5 == 0))
+                button#runBtn.content__form-btn.content__form-btn--task(onclick="runCode()") Запустить
+                textarea#output.lk__inner-border.var-item__period.padding(rows="10" cols="44" placeholder="Результат выполнения кода здесь")
+                a(href="#").content__form-btn.content__form-btn--task Отправить решение
+            .task__inner.lk__inner-border.padding
+                p.task-list Условие задачи №13
+                p.var-item__period.padding-t Найдите сумму всех чисел меньше 1000, кратных 3 или 5.

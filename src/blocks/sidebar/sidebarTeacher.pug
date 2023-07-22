@@ -1,0 +1,26 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=1840")
+        title Сайдбар учителя
+    body
+        .container__sidebar.grid
+            sidebar.sidebar 
+                a.sidebar__logo(href="../teacherMain.html") ЛОГОтип
+                ul.sidebar__menu.flex.flex-col
+                    li.sidebar__items-menu
+                        a.sidebar__home-link#main-teacher(href="../teacherMain.html") Главная
+                    li.sidebar__items-menu
+                        a.sidebar__task-link#tasks-teacher(href="../teacherTask.html") Мои задачи
+                    li.sidebar__items-menu  
+                        a.sidebar__var-link#myVar-teacher(href="../teacherVar.html") Мои варианты
+                    li.sidebar__items-menu  
+                        a.sidebar__students-link#my-students(href="../myStudents.html") Мои ученики     
+                a.sidebar__exit(href="../index.html") Выйти 
+                    mixin icon(name)
+                        svg(class=`icon icon-${name}`)
+                            use(xlink:href=`assets/images/sprite.svg#${name}`)
+                    +icon("exit")
+        script(src="assets/js/linkOpenPage.min.js")

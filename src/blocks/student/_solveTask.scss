@@ -1,0 +1,59 @@
+.inner {
+    padding-bottom: 24px;
+    gap: 24px;
+    align-items: center;
+}
+
+.solve__task {
+    gap: 24px;
+}
+
+.task__number {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 48px;
+}
+
+.stud-var-item__numbers_num-active {
+    height: 32px;
+    width: 48px;
+    border: 2px solid $black-color;
+    color: $black-color;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.content__form-btn--task {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    margin-left: 92px;
+}
+
+.lk__inner-border {
+    border-radius: 16px;
+    border: 1.5px solid rgba(21,24,28,.1);
+    background-color: #fbfbfb;
+    margin-top: 48px;
+}
+
+.task-list {
+    font-family: $font-family-Unbounded;
+    font-weight: $bold-font-weight;
+    font-size: 20px;
+    color: $black-color;
+}
+
+.padding {
+    padding: 24px;
+}
+
+.padding-t {
+    padding-top: 24px;
+}

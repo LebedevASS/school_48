@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODikUM</title>
+  <link href="assets/css/styles.min.css" rel="stylesheet">
+</head>
+
+<body class="page">
+  <!DOCTYPE html>
+  <html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODikUM Авторизация/Регистрация</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="img"> </div>
+      <div class="content">
+        <h1 class="content__title">Авторизация</h1>
+        <p class="content__text">Только для зарегистрированных пользователей</p>
+        <form class="content__form grid" action="" method="post">
+          <div class="content__input-wrapper">
+            <input class="input input__mail" type="email" id="email" placeholder=" ">
+            <label class="input-label placeholder" for="email">E-mail</label>
+            <label class="did-floating-label" for="email"></label>
+          </div>
+          <div class="content__input-wrapper">
+            <input class="input input__pass" type="password" id="password" placeholder=" " oninput="passLength()">
+            <label class="input-label placeholder" for="password">Пароль</label>
+            <label class="did-floating-label" for="password"></label>
+            <div class="iconPass">
+              <svg class="icon icon-hide-pass">
+                <use xlink:href="assets/images/sprite.svg#hide-pass"></use>
+              </svg>
+            </div>
+            <div class="iconText d-none">
+              <svg class="icon icon-open-pass">
+                <use xlink:href="assets/images/sprite.svg#open-pass"></use>
+              </svg>
+            </div>
+          </div>
+        </form>
+        <div class="reset-wrapper"> <a class="reset-pass" href="#">Забыли пароль?</a></div>
+        <button class="content__form-btn margin24" type="button">Войти</button>
+        <div class="content__reg-wrapper">
+          <p class="content__text content__text_gray">Еще не зарегистрированы?</p><a class="content__reg btn-reset" href="#openModal">Регистрация</a>
+        </div>
+      </div>
+      <div class="modal" id="openModal">
+        <div class="modal-dialog">
+          <div class="modal-content grid">
+            <div class="imgWarn content"> </div>
+            <h1 class="content__title">Внимание!</h1><span class="content__text--modal">Регистрация учителей осуществляется администратором.</span><a class="close content__form-btn margin24 content__form-btn--text" href="../reg.html" title="Close">Я - ученик</a><a class="close close__form-btn margin24 content__form-btn--text" href="#close" title="Close">Закрыть</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/main.min.js"></script>
+  </body>
+
+  </html>
+  <div class="mobile-detected">
+    <div class="imgWarn content opacity"> </div>
+    <h1 class="detected__title">Внимание! Система не предназначена для использования на мобильных устройствах</h1>
+  </div>
+  <script src="assets/js/main.min.js"></script>
+  <script src="assets/js/mobileDetected.min.js"></script>
+</body>
+
+</html>
