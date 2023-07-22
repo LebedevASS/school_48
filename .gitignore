@@ -1,0 +1,6 @@
+.gitignore
+.editorconfig
+.idea
+.git
+node_modules
+build
