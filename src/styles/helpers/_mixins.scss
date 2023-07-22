@@ -1,0 +1,49 @@
+@mixin task-status_style {
+    border-radius: 48px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 8px;
+    font-family: $font-family-MinSans;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px 16px;
+    height: 35px;
+}
+
+@mixin task-status_new {
+    @include task-status_style;
+    background-color: rgba(208, 179, 33, 0.102);
+    color: $yellow-color;
+    &_point {
+        background-color: $yellow-color;
+        width: 18px;
+        height: 18px;
+        border-radius: 90px;
+    }
+}
+
+@mixin task-status_active {
+    @include task-status_style;
+    background-color: rgba(16, 166, 116, 0.102);
+    color: $green-color;
+    &_point {
+        background-color: $green-color;
+        width: 18px;
+        height: 18px;
+        border-radius: 90px;
+    }
+}
+
+@mixin task-status_complete {
+    @include task-status_style;
+    background-color: rgba(208, 33, 33, 0.102);
+    color: $red-color;
+    &_point {
+        background-color: $red-color;
+        width: 18px;
+        height: 18px;
+        border-radius: 90px;
+    }
+}
