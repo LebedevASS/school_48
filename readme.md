@@ -64,3 +64,11 @@ API нет.
 Можно прочитать дополнительные сведения:
 * [Документ о концепции и границах](https://docs.google.com/document/d/19q9WAfxAyUAuRWV0lXXiAKiL2v5nuM8Fw7O-zZdBO4Y/edit?usp=sharing)
 * [Основные требования](https://docs.google.com/document/d/1N0tXM5XRDls5zBzBOWQmXOCn9p0UCIhVfGegWIOXhlE/edit?usp=sharing)
+
+## 8. Тестовые логины и пароли
+для входа в ЛК ученика:
+      login: "child@lad24.ru",
+      password: "#01Study7",
+для входа в ЛК учителя:
+      login: "teacher@lad24.ru",
+      password: "#01Study0"
